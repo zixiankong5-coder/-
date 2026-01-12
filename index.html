@@ -2,16 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Game</title>
-    <script type="module" crossorigin src="./assets/index-BkJWDCPY.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BSc7fAxT.css">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>内娱操盘手: 从零开始</title>
+
+    <!-- 手机适配补丁 (保留这个) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mobile-drag-drop@2.3.0-rc.2/default.css">
+    <script src="https://cdn.jsdelivr.net/npm/mobile-drag-drop@2.3.0-rc.2/index.min.js"></script>
+    <script>
+        try {
+            MobileDragDrop.polyfill({
+                dragImageTranslateOverride: MobileDragDrop.scrollBehaviourDragImageTranslateOverride
+            });
+        } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/BuzzMakerStudios/assets/index-CAqs2hXl.js"></script>
+    <link rel="stylesheet" crossorigin href="/BuzzMakerStudios/assets/index-D1z17Q7i.css">
   </head>
-  <body>
-    <!-- 1. 这里就是你要加的容器，React 会把游戏画在这里 -->
-    <div id="root"></div>
+  
+  <body class="bg-gray-900 text-white overflow-hidden h-[100dvh] w-screen">
+    <div id="root" class="h-full w-full"></div>
     
-    <!-- 2. 指向你的入口文件。因为没有 src 文件夹，所以直接写 /index.tsx -->
-    <!-- 注意：如果你的文件夹里那个 .tsx 文件叫 main.tsx，请把下面的 index.tsx 改成 main.tsx -->
+    <!-- ⚠️ 宝子注意：下面这一行引用的文件必须是你 src 里真实存在的文件名 -->
+    <!-- 如果你的文件叫 main.tsx，就不用改 -->
+    <!-- 如果你的文件叫 index.tsx，请手动把下面的 main.tsx 改成 index.tsx -->
   </body>
 </html>
